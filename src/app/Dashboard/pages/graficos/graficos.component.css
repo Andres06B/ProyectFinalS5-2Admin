@@ -1,0 +1,4 @@
+.full-iframe {
+  width: 100%;
+  height: calc(100vh - 4rem); /* Ocupa casi toda la altura de la pantalla, ajustando según el tamaño del navbar */
+}

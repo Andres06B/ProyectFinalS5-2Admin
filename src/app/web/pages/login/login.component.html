@@ -1,0 +1,56 @@
+<section class="relative min-h-screen py-12 bg-gray-50 dark:bg-gray-900">
+  <div class="absolute inset-0 -z-10 bg-gradient-to-r from-[#003366] to-[#66c2ff] opacity-80"></div>
+  <div class="text-center px-6 md:px-12 lg:px-24">
+    <h1 class="text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#003366] to-[#66c2ff] sm:text-4xl lg:text-5xl mb-3">
+      Bienvenido a Nuestras Plataformas
+    </h1>
+    <div class="w-24 h-1 mx-auto bg-[#003366] mb-3 animate-bar"></div>
+    <p class="text-lg font-medium text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-6">
+      Accede a las experiencias exclusivas de <strong>Iguana House</strong>. Inicia sesión para descubrir nuestras ofertas y servicios diseñados especialmente para ti.
+    </p>
+  </div>
+  <div class="flex justify-center px-6 py-8 mx-auto lg:py-0">
+    <div class="w-full max-w-sm bg-white rounded-lg shadow-lg transition-transform hover:shadow-2xl dark:border sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+      <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+        <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
+          <img class="w-8 h-8 mr-2" src="/captura5.png" alt="logo">
+          Iguana House
+        </a>
+        <h2 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+          Iniciar Sesión con Iguana House
+        </h2>
+        <form class="space-y-4 md:space-y-6" action="/dashboard1" method="GET">
+          <div>
+            <label for="email-iguana" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Correo Electrónico</label>
+            <input type="email" name="email" id="email-iguana" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-[#003366] focus:border-[#003366] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#003366] dark:focus:border-[#003366]" placeholder="Correo" required>
+          </div>
+          <div>
+            <label for="password-iguana" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Contraseña</label>
+            <input type="password" name="password" id="password-iguana" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-[#003366] focus:border-[#003366] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#003366] dark:focus:border-[#003366]" required>
+          </div>
+          <button type="submit" class="w-full text-white bg-[#003366] hover:bg-black hover:text-white transition-transform duration-200 transform hover:scale-105 focus:ring-4 focus:outline-none focus:ring-[#003366] font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-[#003366]">
+            Iniciar Sesión
+          </button>
+        </form>
+      </div>
+      <div class="p-6 border-t border-gray-200 dark:border-gray-700">
+        <p class="text-sm text-gray-600 dark:text-gray-400">
+          ¿Olvidaste tu contraseña? <a href="#" class="text-[#003366] hover:underline">Recupérala aquí</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Animación de la barra debajo del título */
+  .animate-bar {
+    animation: bar-move 2s ease-in-out infinite;
+  }
+
+  @keyframes bar-move {
+    0% { transform: scaleX(0); }
+    50% { transform: scaleX(1); }
+    100% { transform: scaleX(0); }
+  }
+</style>

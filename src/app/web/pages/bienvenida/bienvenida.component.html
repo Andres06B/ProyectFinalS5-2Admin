@@ -1,0 +1,68 @@
+<app-navbar-web></app-navbar-web>
+
+<section class="relative min-h-screen py-24 bg-gray-50 dark:bg-gray-900 overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-r from-[#003366] to-[#66c2ff] opacity-80"></div>
+    <div class="absolute inset-0 bg-[url('/assets/images/tu-fondo-textura.jpg')] bg-cover bg-opacity-30"></div>
+
+    <div class="text-center px-6 md:px-12 lg:px-24 relative z-10">
+        <h1 class="text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#003366] to-[#66c2ff] sm:text-5xl lg:text-6xl mb-4">
+            Bienvenido al Portal Administrativo de Coresys
+        </h1>
+        <div class="w-24 h-1 mx-auto bg-[#003366] mb-4 animate-bar"></div>
+        <p class="text-lg font-medium text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-12">
+            Accede a tu plataforma administrativa para gestionar los servicios de <strong>Mundo Travel</strong> e <strong>Iguana House</strong>.
+        </p>
+        <div class="flex justify-center">
+            <button routerLink="/login" class="text-white bg-[#003366] px-8 py-3 rounded-lg hover:bg-black hover:text-white transition-transform duration-200 transform hover:scale-105">
+                Iniciar Sesión
+            </button>
+        </div>
+    </div>
+    <div class="relative mt-20 flex justify-center space-x-12">
+        <div class="w-96 bg-white shadow-2xl rounded-lg overflow-hidden transform transition-transform duration-500 hover:scale-105">
+            <img src="/logomundotrabel.png" alt="Imagen de Mundo Travel" class="w-full h-80 object-cover">
+            <div class="p-8">
+                <h2 class="text-2xl font-bold text-[#003366]">Mundo Travel</h2>
+                <p class="text-gray-600">Explora destinos increíbles con nuestros paquetes de viaje personalizados.</p>
+                <button class="mt-6 text-white bg-[#003366] px-8 py-3 rounded-lg cursor-not-allowed">
+                    Próximamente...
+                </button>
+            </div>
+        </div>
+        <div class="w-96 bg-white shadow-2xl rounded-lg overflow-hidden transform transition-transform duration-500 hover:scale-105">
+            <img src="/iguana.png" alt="Imagen de Iguana House" class="w-full h-80 object-cover">
+            <div class="p-8">
+                <h2 class="text-2xl font-bold text-[#003366]">Iguana House</h2>
+                <p class="text-gray-600">Disfruta de una estancia de lujo con servicios de primera clase.</p>
+                <button routerLink="/login" class="mt-6 text-white bg-[#003366] px-8 py-3 rounded-lg hover:bg-black hover:text-white transition-transform duration-200 transform hover:scale-105">
+                    Iniciar Sesión
+                </button>
+            </div>
+        </div>
+    </div>  
+
+    <div class="absolute inset-0 -z-20 bg-fixed bg-[url('/assets/images/tu-fondo-parallax.jpg')] bg-cover opacity-50"></div>
+</section>
+
+<style>
+    .animate-gradient {
+        background-size: 200% 200%;
+        animation: gradient-move 10s ease infinite;
+    }
+
+    @keyframes gradient-move {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    @keyframes move {
+        0% { transform: translateX(-50%); }
+        50% { transform: translateX(50%); }
+        100% { transform: translateX(-50%); }
+    }
+
+    .animate-bar {
+        animation: move 2s infinite alternate;
+    }
+</style>
