@@ -10,20 +10,30 @@ export class NavbardashComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    window.addEventListener("scroll", () => {
-      const navbar = document.getElementById("navbar");
-      if (window.scrollY > 50) {
-        navbar?.classList.add("shadow-md");
-      } else {
-        navbar?.classList.remove("shadow-md");
-      }
-    });
+    if (typeof window !== 'undefined') {
+      window.addEventListener("scroll", this.handleScroll);
+    }
   }
+
+  ngOnDestroy(): void {
+    if (typeof window !== 'undefined') {
+      window.removeEventListener("scroll", this.handleScroll);
+    }
+  }
+
+  handleScroll = (): void => {
+    const navbar = document.getElementById("navbar");
+    if (window.scrollY > 50) {
+      navbar?.classList.add("shadow-md");
+    } else {
+      navbar?.classList.remove("shadow-md");
+    }
+  };
 
   logout(): void {
     const userConfirmed = confirm("¿Desea cerrar sesión? Será redirigido al login.");
     if (userConfirmed) {
-      this.router.navigate(['/login']); 
+      this.router.navigate(['/login']);
     }
   }
 }
