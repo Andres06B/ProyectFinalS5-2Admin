@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PagosService } from '../../../service/pagos/pagos.service';
 
 @Component({
   selector: 'app-pagos',
@@ -7,4 +8,18 @@ import { Component } from '@angular/core';
 })
 export class PagosComponent {
 
+  pagos: any[] = [];
+  constructor(private pagosService: PagosService) { }
+
+
+  obtenerPagos(){
+    this.pagosService.obtenerPagos().subscribe(
+      (pagos: any[]) => this.pagos = pagos,
+      (error) => console.error('Error al obtener pagos:', error)
+    );
+  }
+
+  ngOnInit() {
+    this.obtenerPagos();
+  }
 }

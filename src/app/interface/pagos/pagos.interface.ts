@@ -1,5 +1,5 @@
 export interface PagosInterface {
-    id: number;
+  id: number;
   id_Reserva: number;
   monto: number;
   estado: string;

@@ -21,6 +21,7 @@ import { GraficosComponent } from './Dashboard/pages/graficos/graficos.component
 import { BienvenidaComponent } from './web/pages/bienvenida/bienvenida.component';
 import { UsuariosComponent } from './Dashboard/pages/usuarios/usuarios.component';
 import { PagosComponent } from './Dashboard/pages/pagos/pagos.component';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { PagosComponent } from './Dashboard/pages/pagos/pagos.component';
     AppRoutingModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })
