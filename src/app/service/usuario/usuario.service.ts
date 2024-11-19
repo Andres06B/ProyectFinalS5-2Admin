@@ -1,9 +1,19 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { UsuariosInterface } from '../../interface/usuarios/usuarios.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsuarioService {
 
-  constructor() { }
+  ApiUrlUser = 'http://localhost:8080/api/v1/user';
+
+  constructor(private http: HttpClient) { }
+
+  obtenerUsuario(): Observable<UsuariosInterface[]>{
+    return this.http.get<UsuariosInterface[]>(this.ApiUrlUser);
+  }
 }
+
