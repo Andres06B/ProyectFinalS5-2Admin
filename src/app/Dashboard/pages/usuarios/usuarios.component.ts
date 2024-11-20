@@ -8,7 +8,7 @@ import { UsuarioService } from '../../../service/usuario/usuario.service';
 })
 export class UsuariosComponent {
   
-  usuarios: any[] = [];
+  usuarios: any;
   constructor(private usuarioService: UsuarioService) { }
   ngOnInit() {
     this.getUsuarios();
@@ -16,8 +16,7 @@ export class UsuariosComponent {
 
   getUsuarios(){
     this.usuarioService.obtenerUsuario().subscribe(
-      (usuarios: any[]) => this.usuarios = usuarios,
-      (error) => console.error('Error al obtener usuarios:', error)
+      (usuarios: any[]) => this.usuarios = usuarios
     );
   }
 

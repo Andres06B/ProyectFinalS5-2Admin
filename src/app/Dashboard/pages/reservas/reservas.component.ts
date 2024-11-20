@@ -7,7 +7,7 @@ import { ReservasService } from '../../../service/reservas/reservas.service';
   styleUrl: './reservas.component.css'
 })
 export class ReservasComponent {
-  reservas: any[] = [];
+  reservas: any;
 
   constructor(private reservasService: ReservasService) { }
 
@@ -17,8 +17,7 @@ export class ReservasComponent {
 
   obtenerReservas(){
     this.reservasService.obtenerReservas().subscribe(
-      (reservas: any[]) => this.reservas = reservas,
-      (error) => console.error('Error al obtener reservas:', error)
+      (reservas: any) => this.reservas = reservas,
     );
   }
 }

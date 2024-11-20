@@ -7,7 +7,7 @@ import { ReservasInterface } from '../../interface/reservas/reservas.interface';
   providedIn: 'root'
 })
 export class ReservasService {
-  ApiUrlReserva = 'http://localhost:8080/api/v1/reserva';
+  ApiUrlReserva = 'http://localhost:8080/reserva';
 
   constructor(private http: HttpClient) { }
 

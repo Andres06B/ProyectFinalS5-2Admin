@@ -8,7 +8,7 @@ import { PagosInterface } from '../../interface/pagos/pagos.interface';
 })
 export class PagosService {
 
-  apiUrlPasarela = 'http://localhost:8080/api/v1/pago';
+  apiUrlPasarela = 'http://localhost:8080/pago';
 
   constructor(private http: HttpClient) { }
 

@@ -8,14 +8,14 @@ import { PagosService } from '../../../service/pagos/pagos.service';
 })
 export class PagosComponent {
 
-  pagos: any[] = [];
+  pagos: any;
   constructor(private pagosService: PagosService) { }
 
 
   obtenerPagos(){
     this.pagosService.obtenerPagos().subscribe(
-      (pagos: any[]) => this.pagos = pagos,
-      (error) => console.error('Error al obtener pagos:', error)
+      (pagos: any[]) => this.pagos = pagos
+      
     );
   }
 
