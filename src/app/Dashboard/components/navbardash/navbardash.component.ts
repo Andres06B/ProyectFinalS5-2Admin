@@ -31,9 +31,9 @@ export class NavbardashComponent implements OnInit {
   };
 
   logout(): void {
-    const userConfirmed = confirm("¿Desea cerrar sesión? Será redirigido al login.");
+    const userConfirmed = confirm("¿Desea cerrar sesión? Será redirigido al inicio.");
     if (userConfirmed) {
-      this.router.navigate(['/login']);
+      this.router.navigate(['/Inicio']);
     }
   }
 }

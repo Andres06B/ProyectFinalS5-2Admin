@@ -1,5 +1,5 @@
 export interface ReservasInterface {
-    id: number;
+  id: number;
   fecha_Reserva: Date;
   fecha_Entrada: Date;
   fecha_Salida: Date;
