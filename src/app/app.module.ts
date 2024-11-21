@@ -22,6 +22,7 @@ import { BienvenidaComponent } from './web/pages/bienvenida/bienvenida.component
 import { UsuariosComponent } from './Dashboard/pages/usuarios/usuarios.component';
 import { PagosComponent } from './Dashboard/pages/pagos/pagos.component';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration(),
